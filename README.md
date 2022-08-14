@@ -24,3 +24,36 @@ aws3_bucket:
 
 <br>
 <br>
+
+## Usage Examples
+
+### File Upload
+
+```dart
+
+// returns url pointing to S3 file
+
+Future<String?> _upload(File? selectedFile) async {
+  IAMCrediental iamCrediental = IAMCrediental();
+  iamCrediental.secretKey = Constant.awsSecertKey;
+  iamCrediental.secretId = Constant.awsSecretId;
+  ImageData imageData = ImageData(DateTime.now().millisecondsSinceEpoch.toString(), selectedFile!.path, imageUploadFolder: "testing");
+  return  await Aws3Bucket.upload(Constant.bucket, AwsRegion.AP_EAST_1,AwsRegion.AP_EAST_1, imageData, iamCrediental);
+}
+
+```
+
+
+```dart
+
+// deleting s3 file
+
+Future<bool?> _delete() async {
+  IAMCrediental iamCrediental = IAMCrediental();
+  iamCrediental.secretKey = Constant.awsSecertKey;
+  iamCrediental.secretId = Constant.awsSecretId;
+  return await Aws3Bucket.delete(Constant.bucket, "1660476300927.png", "testing", AwsRegion.AP_EAST_1, iamCrediental, AwsRegion.AP_EAST_1,  );
+}
+
+```
+

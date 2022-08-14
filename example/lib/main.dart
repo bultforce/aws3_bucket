@@ -76,7 +76,7 @@ class AwsPluginTestState extends State<AwsPluginTest> {
         onPressed: () async {
 
           if (selectedFile != null){
-            _upload();
+            _upload(selectedFile);
           }else{
             _delete();
           }
@@ -86,7 +86,7 @@ class AwsPluginTestState extends State<AwsPluginTest> {
     );
   }
 
-  Future<String?> _upload() async {
+  Future<String?> _upload(File? selectedFile) async {
     String? result;
     IAMCrediental iamCrediental = IAMCrediental();
     iamCrediental.secretKey = Constant.awsSecertKey;
@@ -99,10 +99,6 @@ class AwsPluginTestState extends State<AwsPluginTest> {
    }else{
      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Something Went Wrong")));
    }
-   selectedFile = null;
-   setState(() {
-
-   });
     return result;
   }
 
