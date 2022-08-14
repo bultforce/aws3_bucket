@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aws3_bucket.iml" filepath="$PROJECT_DIR$/aws3_bucket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/aws3_bucket_android.iml" filepath="$PROJECT_DIR$/android/aws3_bucket_android.iml" />
     </modules>
   </component>
 </project>

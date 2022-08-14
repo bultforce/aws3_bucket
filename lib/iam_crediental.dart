@@ -1,20 +1,20 @@
 import 'dart:collection';
 
 class IAMCrediental {
-  String? sercetKey;
-  String? sercetId;
+  String? secretKey;
+  String? secretId;
   String? identity;
 
 
-  IAMCrediental({this.sercetKey, this.sercetId,this.identity});
+  IAMCrediental({this.secretKey, this.secretId,this.identity});
 
   IAMCrediental.fromMap(LinkedHashMap<Object?, Object?> map) {
 
-    if (map["sercetKey"] != null) {
-      sercetKey = map["sercetKey"].toString();
+    if (map["secretKey"] != null) {
+      secretKey = map["secretKey"].toString();
     }
-    if (map["sercetId"] != null) {
-      sercetId =map["sercetId"].toString();
+    if (map["secretId"] != null) {
+      secretId =map["secretId"].toString();
     }
     if (map["identity"] != null) {
       identity = map["identity"].toString();
@@ -23,8 +23,8 @@ class IAMCrediental {
 
   Map<String, dynamic> toJson() {
     return {
-      'sercetKey': sercetKey,
-      'sercetId': sercetId,
+      'secretKey': secretKey,
+      'secretId': secretId,
       'identity': identity
     };
   }
