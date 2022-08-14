@@ -1,7 +1,7 @@
 name: aws3_bucket
-description: A new Flutter project.
-version: 0.0.1
-homepage:
+description: this plugin use for upload and delete file in aws3 bucket
+version: 0.0.2
+homepage: https://github.com/bultforce/aws3_bucket
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
