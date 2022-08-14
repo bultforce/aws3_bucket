@@ -43,7 +43,7 @@ Future<String?> _upload(File? selectedFile) async {
 
 ```
 
-
+### Delete File
 ```dart
 
 // deleting s3 file
