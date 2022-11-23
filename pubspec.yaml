@@ -1,11 +1,11 @@
 name: aws3_bucket
 description: this plugin use for upload and delete file in aws3 bucket
-version: 0.0.2
+version: 0.0.6
 homepage: https://github.com/bultforce/aws3_bucket
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
-  flutter: ">=2.5.0"
+  sdk: ">=2.13.1 <3.0.0"
+  flutter: ">=2.2.0"
 
 dependencies:
   flutter:
@@ -15,7 +15,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
