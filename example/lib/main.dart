@@ -92,7 +92,7 @@ class AwsPluginTestState extends State<AwsPluginTest> {
     iamCrediental.secretKey = Constant.awsSecertKey;
     iamCrediental.secretId = Constant.awsSecretId;
     ImageData imageData = ImageData(DateTime.now().millisecondsSinceEpoch.toString(), selectedFile!.path, imageUploadFolder: "testing");
-   result= await Aws3Bucket.upload(Constant.bucket, AwsRegion.AP_EAST_1,AwsRegion.AP_EAST_1, imageData, iamCrediental);
+   result= await Aws3Bucket.upload(Constant.bucket, AwsRegion.AP_NORTHEAST_1,AwsRegion.AP_NORTHEAST_1, imageData, iamCrediental);
    print(result);
    if(result!=null){
      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(result)));
@@ -107,7 +107,7 @@ class AwsPluginTestState extends State<AwsPluginTest> {
     IAMCrediental iamCrediental = IAMCrediental();
     iamCrediental.secretKey = Constant.awsSecertKey;
     iamCrediental.secretId = Constant.awsSecretId;
-    result= await Aws3Bucket.delete(Constant.bucket, "1660476300927.png", "testing", AwsRegion.AP_EAST_1, iamCrediental, AwsRegion.AP_EAST_1,  );
+    result= await Aws3Bucket.delete(Constant.bucket, "1660476300927.png", "testing", AwsRegion.AP_NORTHEAST_1, iamCrediental, AwsRegion.AP_NORTHEAST_1,  );
     print(result);
     if(result!=null){
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("deleted successfully")));

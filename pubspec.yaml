@@ -1,6 +1,6 @@
 name: aws3_bucket
 description: this plugin use for upload and delete file in aws3 bucket
-version: 0.0.7
+version: 0.0.8
 homepage: https://github.com/bultforce/aws3_bucket
 
 environment:
